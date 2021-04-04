@@ -8,6 +8,7 @@ class Camera():
         self.camera = PiCamera()
         self.camera.resolution = self.resolution
         self.camera.framerate = 16
+        self.camera.iso = 600
 
     def get_frame(self):
         data = np.empty(self.image_size, dtype=np.uint8)
