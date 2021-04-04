@@ -48,11 +48,9 @@ def create_dataset_series(pixels):
 
 
 def data_to_file(execution_id, data):
-    keys = ['on_file', 'off_file', 'x', 'y']
     data_file = f'{OUTPUT_DIR}/data_{execution_id}.csv'
     with open(data_file, 'w', newline='') as myfile:
         wr = csv.writer(myfile)
-        wr.writerow(keys)
         wr.writerows(data)
 
 if not os.path.exists(IMG_DIR):
