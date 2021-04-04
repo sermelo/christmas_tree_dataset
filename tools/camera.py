@@ -14,5 +14,8 @@ class Camera():
         self.camera.capture(data, 'rgb')
         return data
 
+    def get_exposure_speed(self):
+        return self.camera.exposure_speed
+
     def frame_to_file(self, file_name):
         self.camera.capture(file_name)
