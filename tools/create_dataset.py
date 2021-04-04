@@ -43,7 +43,7 @@ def create_dataset_series(pixels):
     data = []
     for i in range(SIZE):
         off_file, on_file = capture_frames(camera, pixels, path_template, i)
-        data.append([off_file, on_file, '', ''])
+        data.append([off_file, on_file])
     data_to_file(execution_id, data)
 
 
