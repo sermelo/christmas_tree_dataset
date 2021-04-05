@@ -37,9 +37,7 @@ class DataProcessor():
             for row in reader:
                 position = window.request_position(f'{self.in_imgs_dir}/{row[1]}')
                 if position is not None:
-                    row[2] = position[0]
-                    row[3] = position[1]
-                    generated_data.append(row)
+                    generated_data.append([row[0], row[1], position[0], position[1]])
         return generated_data
 
     def store_data(self, data):
