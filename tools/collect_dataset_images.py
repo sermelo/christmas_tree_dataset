@@ -29,7 +29,6 @@ def capture_frames(camera, pixels, path_template, pos):
         camera.frame_to_file(off_file_name)
         exposure_time_off = camera.get_exposure_speed()
         pixels[pos] = GREEN
-        on_frame = camera.get_frame()
         camera.frame_to_file(on_file_name)
         exposure_time_on = camera.get_exposure_speed()
         pixels[pos] = OFF
