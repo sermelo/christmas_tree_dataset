@@ -39,6 +39,7 @@ def capture_frames(camera, pixels, path_template, pos):
 def create_dataset_series(pixels):
     camera = Camera()
     execution_id = binascii.b2a_hex(os.urandom(3)).decode()
+    print(f'Execution id: {execution_id}')
     path_template = f'{IMG_DIR}/light_{execution_id}'
 
     data = []
